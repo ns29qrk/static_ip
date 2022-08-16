@@ -1,12 +1,14 @@
 #!/bin/sh
 
-ip4_network='192.168.100.'
+yaml_name ='10_nyanyan.yaml'
+
+ip4_network='192.168.29.'
 ip4_mask='23'
-ip4_router='192.168.100.253'
+ip4_router='192.168.29.253'
 
 ip6_network='fd29::'
 ip6_mask='16'
-#ip6_router='192.168.100.253'
+#ip6_router='fd29::255'
 
 
 _host=255
@@ -16,7 +18,7 @@ fi
 
 device_name=$(ip a | grep 192.168 | awk '{print $NF}')
 
-sudo cat << EOF | sudo tee /etc/netplan/29q_custom.yaml
+sudo cat << EOF | sudo tee /etc/netplan/${yaml_name}
 network:
   version: 2
   renderer: networkd
