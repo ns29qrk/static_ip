@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yaml_name ='10_nyanyan.yaml'
+yaml_name='10_nyanyan.yaml'
 
 ip4_network='192.168.29.'
 ip4_mask='23'
